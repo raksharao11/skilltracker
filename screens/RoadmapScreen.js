@@ -14,6 +14,7 @@ export default function RoadmapScreen() {
   const generateRoadmap = async () => {
     setLoading(true);
     try {
+      console.log('API Key being sent:', process.env.EXPO_PUBLIC_OPENAI_API_KEY);
       const res = await axios.post(
         'https://openrouter.ai/api/v1/chat/completions',
         {
@@ -27,7 +28,7 @@ export default function RoadmapScreen() {
         },
         {
           headers: {
-            Authorization: 'Bearer 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',
+            Authorization: `Bearer ${process.env.EXPO_PUBLIC_OPENAI_API_KEY}`,
             'Content-Type': 'application/json',
           },
         }
