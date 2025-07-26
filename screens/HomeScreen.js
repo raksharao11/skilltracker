@@ -14,14 +14,9 @@ export default function HomeScreen({ navigation }) {
       <Button title="Log Out" onPress={handleLogout} />
         <Button title="Generate Roadmap" onPress={() => navigation.navigate('Roadmap')} />
         <Button title="Go to Daily Planner" onPress={() => navigation.navigate('DailyPlanner')} />
-        <Button
-  title="📅 Open Calendar View"
-  onPress={() => navigation.navigate('Calendar')}
-/>
-<Button title="📈 View My Stats" onPress={() => navigation.navigate('Stats')} />
-
-
-      
+        <Button title="📅 Open Calendar View" onPress={() => navigation.navigate('Calendar')}/>
+        <Button title="📈 View My Stats" onPress={() => navigation.navigate('Stats')} />
+        <Button title="🏅 View Achievements" onPress={() => navigation.navigate('Achievements')} />
     </View>
   );
 }
