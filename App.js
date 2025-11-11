@@ -13,6 +13,8 @@ import { auth } from './firebase'; // ✅ import your auth instance
 import CalendarScreen from './screens/CalendarScreen';
 import StatsScreen from './screens/StatsScreen';
 
+require('dotenv').config(); // Load environment variables
+
 // 🔔 Configure foreground notification behavior
 Notifications.setNotificationHandler({
   handleNotification: async () => ({

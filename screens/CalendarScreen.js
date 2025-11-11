@@ -46,7 +46,7 @@ export default function CalendarScreen() {
         data={tasks}
         keyExtractor={(_, index) => index.toString()}
         renderItem={({ item }) => (
-          <Text style={styles.task}>• {item.title} {item.completed ? '✅' : ''}</Text>
+          <Text style={styles.task}>• {item.title} {item.completed ? '👍' : ''}</Text>
         )}
       />
     </View>
