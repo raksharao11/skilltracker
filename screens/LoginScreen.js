@@ -3,16 +3,30 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { initializeUserProgress } from '../utils/achievementUtils';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then(() => navigation.replace('Home'))
-      .catch((err) => setError(err.message));
+  const handleLogin = async () => {
+    setError('');
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      if (user) {
+        await initializeUserProgress(user.uid);
+        console.log('User progress initialized/checked after login for UID:', user.uid);
+      }
+      
+      navigation.replace('Home'); // Navigate to Home after successful login and progress init
+    } catch (err) {
+      console.error('Login error:', err.message); // Log full error for debugging
+      setError(err.message); // Display error to user
+      Alert.alert('Login Error', err.message); // Show a more prominent alert
+    }
   };
 
   return (

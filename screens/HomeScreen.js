@@ -47,55 +47,20 @@ export default function HomeScreen({ navigation }) {
   );
 
   return (
-    <ScrollView style={styles.outerContainer} contentContainerStyle={styles.scrollContent}>
-      {/* Header Section */}
-      <View style={styles.header}>
-        <Text style={styles.welcomeText}>Welcome back, **User!**</Text>
-        <Text style={styles.title}>SkillTrackr</Text>
-        <Text style={styles.subtitle}>Ready to track your progress?</Text>
-      </View>
-      
-      {/* Feature Cards Section */}
-      <View style={styles.featureContainer}>
-        {features.map((feature) => {
-          let IconComponent;
-          switch (feature.icon) {
-            case 'road-sign':
-              IconComponent = MaterialCommunityIcons;
-              break;
-            case 'calendar-check-o':
-              IconComponent = AntDesign;
-              break;
-            case 'calendar':
-              IconComponent = Feather;
-              break;
-            case 'stats-chart':
-              IconComponent = Ionicons;
-              break;
-            default:
-              IconComponent = Feather; // Default to Feather
-          }
-          return (
-            <Card
-              key={feature.screen}
-              title={feature.title}
-              iconName={feature.icon}
-              onPress={() => navigation.navigate(feature.screen)}
-              iconComponent={IconComponent}
-              color={feature.color}
-            />
-          );
-        })}
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to SkillTrackr!</Text>
+      <Button title="Log Out" onPress={handleLogout} />
+        <Button title="Generate Roadmap" onPress={() => navigation.navigate('Roadmap')} />
+        <Button title="Go to Daily Planner" onPress={() => navigation.navigate('DailyPlanner')} />
+        <Button
+  title="📅 Open Calendar View"
+  onPress={() => navigation.navigate('Calendar')}
+/>
+<Button title="📈 View My Stats" onPress={() => navigation.navigate('Stats')} />
 
-      {/* Logout Button */}
-      <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
-        <Text style={styles.logoutButtonText}>Log Out</Text>
-        <AntDesign name="logout" size={18} color="#fff" style={{marginLeft: 8}} />
-      </TouchableOpacity>
+
       
-      <Text style={styles.footerText}>Logged in as: {auth.currentUser?.email || 'N/A'}</Text>
-    </ScrollView>
+    </View>
   );
 }
 

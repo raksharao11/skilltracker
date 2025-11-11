@@ -12,6 +12,7 @@ import { Platform } from 'react-native';
 import { auth } from './firebase'; // ✅ import your auth instance
 import CalendarScreen from './screens/CalendarScreen';
 import StatsScreen from './screens/StatsScreen';
+import AchievementsScreen from './screens/AchievementsScreen';
 
 require('dotenv').config(); // Load environment variables
 
@@ -70,6 +71,7 @@ export default function App() {
         <Stack.Screen name="DailyPlanner" component={DailyPlannerScreen} />
         <Stack.Screen name="Calendar" component={CalendarScreen} />
         <Stack.Screen name="Stats" component={StatsScreen} />
+        <Stack.Screen name="Achievements" component={AchievementsScreen} options={{ title: 'Your Achievements' }} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );
