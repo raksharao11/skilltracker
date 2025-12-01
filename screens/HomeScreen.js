@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
       title: "Calendar View", 
       icon: "calendar", // Using an icon from Feather
       screen: "Calendar", 
-      color: "#FF9800" // Orange
+      color: "#bc7101ff" // Orange
     },
     { 
       title: "View My Stats", 
