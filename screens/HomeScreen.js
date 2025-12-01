@@ -22,7 +22,7 @@ export default function HomeScreen({ navigation }) {
       title: "Daily Planner", 
       icon: "calendar-check-o", // Using an icon from AntDesign
       screen: "DailyPlanner", 
-      color: "#2196F3" // Blue
+      color: "#1a6baeff" // Blue
     },
     { 
       title: "Calendar View", 
