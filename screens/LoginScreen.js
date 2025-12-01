@@ -125,3 +125,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+//logged in user progress initialisation handled
