@@ -22,13 +22,13 @@ export default function HomeScreen({ navigation }) {
       title: "Daily Planner", 
       icon: "calendar-check-o", // Using an icon from AntDesign
       screen: "DailyPlanner", 
-      color: "#2196F3" // Blue
+      color: "#1a6baeff" // Blue
     },
     { 
       title: "Calendar View", 
       icon: "calendar", // Using an icon from Feather
       screen: "Calendar", 
-      color: "#FF9800" // Orange
+      color: "#bc7101ff" // Orange
     },
     { 
       title: "View My Stats", 
