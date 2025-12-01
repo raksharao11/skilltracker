@@ -204,6 +204,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
 });
+//tests for commit
 
 /*const styles = StyleSheet.create({
   container: { padding: 20, flex: 1 },
