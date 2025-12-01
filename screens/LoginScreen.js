@@ -124,5 +124,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
   },
-}); //git testing here
-// End of screens/LoginScreen.js
+});
+//logged in user progress initialisation handled
