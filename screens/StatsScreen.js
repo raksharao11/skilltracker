@@ -297,3 +297,5 @@ const styles = StyleSheet.create({
   title: { fontSize: 22, fontWeight: 'bold', marginBottom: 10 },
   stat: { fontSize: 18, marginVertical: 5 },
 });*/
+
+//file updated
