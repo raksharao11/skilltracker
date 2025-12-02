@@ -126,3 +126,4 @@ const styles = StyleSheet.create({
   },
 });
 //logged in user progress initialisation handled
+//Login fix
